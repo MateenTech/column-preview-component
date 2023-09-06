@@ -1,0 +1,164 @@
+:root {
+    /* Primary Colors */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral Colors */
+    --transparent-white-p: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+
+    /* Fonts */
+    --font-sm: 15px;
+    --font-primary: 'Lexend Deca', sans-serif;
+    --font-headings: 'Big Shoulders Display', sans-serif;
+    --font-w-md: 400;
+    --font-w-bold: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Global */
+html,
+body {
+    font-family: var(--font-primary);
+    font-weight: var(--font-w-md);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-headings);
+    font-weight: var(--font-w-bold);
+}
+
+p {
+    font-size: var(--font-sm);
+}
+
+img {
+    width: 100%;
+}
+
+.cta {
+    border: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 1.25rem;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+/* Global End */
+
+
+/* Container - Cards  */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--very-light-gray);
+    display: grid;
+    place-content: center;
+    padding: 5rem 2rem;
+}
+
+
+.cards__col-sedans {
+    background-color: var(--bright-orange);
+}
+.cards__col-suvs {
+    background-color: var(--dark-cyan);
+}
+.cards__col-luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.cards__col {
+    padding: 2.75rem;
+}
+
+
+.cards__col__img {
+    width: 60px;
+    display: grid;
+    place-content: center;
+}
+
+
+.cards__col {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.25rem;
+}
+
+.cards__col__descp h2 {
+    color: var(--very-light-gray);
+    text-transform: uppercase;
+    margin-bottom: 1.75rem;
+}
+
+.cards__col__descp p {
+    color: var(--transparent-white-p);
+}
+
+.cards__col > .cta {
+    margin-top: 2.75rem;
+    border: 2px solid transparent;
+}
+.cards__col > .cta:active {
+    background-color: transparent;
+    border:  2px solid #fff;
+    color: #fff;
+}
+
+.cta__sedans {
+    color: var(--bright-orange);
+}
+.cta__suvs {
+    color: var(--dark-cyan);
+}
+.cta__luxury {
+    color: var(--very-dark-cyan);
+}
+
+/* Container - Cards End */
+
+
+/* Footer */
+.attribution {
+    background-color: var(--very-light-gray);
+    padding: 0.75rem;
+    text-align: center;
+    color: var(--dark-cyan);
+}
+
+.attribution a {
+    text-underline-offset: 0.25rem;
+    color: var(--very-dark-cyan);
+    margin-left: 0.25rem;
+}
+
+.attribution a:active {
+    color: var(--bright-orange);
+}
+/* Footer End */
+/* 
+@media screen and (min-width: 375px) {
+    .cards {
+        max-width: 320px;
+    }
+} */
+
+
+@media screen and (min-width: 1024px) {
+    .cards {
+        max-width: 740px;
+        display: flex;
+        flex-direction: row;
+    }
+}
