@@ -36,7 +36,7 @@ function loadCardsContent() {
             <img src="./images/icon-${model.toLowerCase()}.svg" alt="${model.toLowerCase()} icon" />
           </div>
          <div class="cards__col__descp">
-            <h2>${model}</h2>
+            <h1>${model}</h1>
             <p>
             ${descp}
             </p>
